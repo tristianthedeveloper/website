@@ -16,11 +16,22 @@ const routes = [
     component: function() {
       return import(/* webpackChunkName: "about" */ `../views/About.vue`);
     },
+  },{
+    path: `/sponsors`,
+    name: `sponsors`,
+    component: function() {
+      return import(`../views/Sponsors.vue`);
+    },
   },
   {
     path: `/rules`,
     name: `rules of the server`,
     component: () => import(`../views/MarkdownTest.vue`),
+  },
+  {
+    path: `/meme`,
+    name: `we doin meme events`,
+    component: () => import(`../views/Meme.vue`),
   },
   {
     path: `/404`,

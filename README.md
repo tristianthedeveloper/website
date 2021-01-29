@@ -1,4 +1,10 @@
-# Branch is pretty stable. Just do npm install and everything should work pretty fine. Make sure you have vue cli installed
+# Branch is pretty stable. Just do npm install and everything should work pretty fine. **Make sure you have vue cli installed**
+
+# quick start and help with front end
+
+if you dont have key and cert, go to `vue.config.js` and set https to false.  
+do `npm run serve` and vue cli will launch a front end hot reload server. its pretty much out of the box.  
+if you want to do some fancy stuff, read below
 
 # node
 
@@ -12,6 +18,27 @@ make sure to run `npm run build` so vue can build files to `./dist/`
 # website
 
 [stem.help](https://stem.help)
+
+# database
+
+Good news, we actually use a mongodb. 
+
+# configuring
+`/srv`
+```env
+# these are optional
+HTTP_PORT=80
+HTTPS_PORT=443
+COOKIE_SECRET=secret key. not required for dev server
+DISCORD_CLIENT_SECRET=the discord application token
+DISCORD_CLIENT_ID=the id
+MONGODB_URI=mongodb uri. required for dev
+```
+
+`srv/discordBot`
+```env
+DISCORD_BOT_TOKEN=the discord BOT token
+```
 
 # vue setup
 
